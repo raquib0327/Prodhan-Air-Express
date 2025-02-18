@@ -74,7 +74,7 @@ body {
   justify-content: center;
   text-align: center;
   color: white;
-  margin-top: -76px; /* Compensate for fixed navbar */
+  margin-top: 70px; /* Compensate for fixed navbar */
 }
 
 .hero-text {
