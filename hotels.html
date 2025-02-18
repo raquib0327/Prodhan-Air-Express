@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking - Travel Dreams</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="hotels.css" />
+  </head>
+  <body>
+
+    
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <!-- <img src="../images/logo.png" alt="Travel Dreams" height="40" /> -->
+            Prodhan Air Express
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item active" href="airtickets.html">
+                      <i class="fas fa-plane-departure"></i> Air Tickets</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="hotels.html">
+                      <i class="fas fa-hotel"></i> Hotels</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="cars.html">
+                      <i class="fas fa-car"></i> Car Rental</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="bikes.html">
+                      <i class="fas fa-bicycle"></i> Bike Rental</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="visa.html">
+                      <i class="fas fa-passport"></i> Visa Services</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Our Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-buttons">
+              <a href="airtickets.html" class="btn btn-primary">Book Your Trip</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="container text-center">
+          <h1 class="display-4 fw-bold text-white mb-3">
+            Find Your Perfect Stay
+          </h1>
+          <p class="lead text-white mb-4">
+            Discover and book the best hotels worldwide
+          </p>
+          <div class="hero-buttons">
+            <a href="#search-form" class="btn btn-primary btn-lg me-3">
+              <i class="fas fa-search me-2"></i>Search Hotels
+            </a>
+            <a href="#featured-hotels" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-tag me-2"></i>View Deals
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="search-form">
+      <div class="container">
+        <div class="search-container">
+          <form id="hotelSearchForm">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Destination</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fas fa-map-marker-alt"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="destination"
+                    placeholder="City, Area, or Hotel"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Check In</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="far fa-calendar"></i
+                  ></span>
+                  <input
+                    type="date"
+                    class="form-control"
+                    name="checkin"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Check Out</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="far fa-calendar"></i
+                  ></span>
+                  <input
+                    type="date"
+                    class="form-control"
+                    name="checkout"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label">Guests</label>
+                <select class="form-select" name="guests">
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5+ Guests</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <div class="advanced-options mb-3">
+                  <div class="row g-3">
+                    <div class="col-md-3">
+                      <label class="form-label">Property Type</label>
+                      <select class="form-select" name="propertyType">
+                        <option value="all">All Types</option>
+                        <option value="hotel">Hotels</option>
+                        <option value="resort">Resorts</option>
+                        <option value="apartment">Apartments</option>
+                        <option value="villa">Villas</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Star Rating</label>
+                      <select class="form-select" name="starRating">
+                        <option value="any">Any Rating</option>
+                        <option value="5">5 Star</option>
+                        <option value="4">4 Star</option>
+                        <option value="3">3 Star</option>
+                        <option value="2">2 Star</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Price Range</label>
+                      <select class="form-select" name="priceRange">
+                        <option value="any">Any Price</option>
+                        <option value="budget">Budget</option>
+                        <option value="mid">Mid-Range</option>
+                        <option value="luxury">Luxury</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Amenities</label>
+                      <select class="form-select" name="amenities">
+                        <option value="any">Any Amenities</option>
+                        <option value="pool">Swimming Pool</option>
+                        <option value="spa">Spa</option>
+                        <option value="gym">Fitness Center</option>
+                        <option value="beach">Beach Access</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  id="searchButton"
+                >
+                  <i class="fas fa-search me-2"></i>Search Hotels
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Hotels -->
+    <section class="featured-hotels py-5" id="featured-hotels">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Featured Hotels</h2>
+        <div class="row g-4" id="hotelsContainer">
+          <!-- Hotels will be loaded by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="popular-destinations py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Popular Destinations</h2>
+        <div class="row g-4" id="destinationsContainer">
+          <!-- Destinations will be loaded by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Why Book With Us</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="feature-card text-center">
+              <i class="fas fa-hand-holding-usd mb-3"></i>
+              <h4>Best Price Guarantee</h4>
+              <p>
+                Find a lower price? We'll match it and give you an extra 10%
+                off.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card text-center">
+              <i class="fas fa-headset mb-3"></i>
+              <h4>24/7 Support</h4>
+              <p>
+                Our travel experts are here to assist you anytime, anywhere.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card text-center">
+              <i class="fas fa-medal mb-3"></i>
+              <h4>Verified Reviews</h4>
+              <p>
+                Real reviews from real guests who have stayed at our properties.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card text-center">
+              <i class="fas fa-shield-alt mb-3"></i>
+              <h4>Secure Booking</h4>
+              <p>Your payment and personal information are always protected.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>About Travel Dreams</h4>
+                <p>
+                  Your trusted partner for unforgettable travel experiences. We
+                  make your travel dreams come true.
+                </p>
+                <div class="social-links mt-3">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Our Services</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                  <li><a href="airtickets.html">Flight Booking</a></li>
+                  <li><a href="hotels.html">Hotel Booking</a></li>
+                  <li><a href="cars.html">Car Rental</a></li>
+                  <li><a href="visa.html">Visa Services</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i> 123 Travel Street,
+                    City
+                  </li>
+                  <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                  <li><i class="fas fa-envelope"></i> info@traveldreams.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-0">
+                &copy; 2025 Travel Dreams. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer (Same as air-tickets.html)
+    <footer class="footer">
+      <!-- Footer content remains the same -->
+ </footer> -->
+
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/hotels.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeSearchForm();
+        loadFeaturedHotels();
+        loadPopularDestinations();
+        initializeNavbarScroll();
+        initializeSmoothScroll();
+      });
+
+      // Initialize search form
+      function initializeSearchForm() {
+        const form = document.getElementById("hotelSearchForm");
+        const searchButton = document.getElementById("searchButton");
+
+        // Set minimum date as today
+        const dateInputs = document.querySelectorAll('input[type="date"]');
+        const today = new Date().toISOString().split("T")[0];
+        dateInputs.forEach((input) => {
+          input.min = today;
+        });
+
+        // Set checkout min date based on checkin date
+        const checkinInput = document.querySelector('input[name="checkin"]');
+        const checkoutInput = document.querySelector('input[name="checkout"]');
+
+        checkinInput.addEventListener("change", function () {
+          checkoutInput.min = this.value;
+          if (checkoutInput.value && checkoutInput.value <= this.value) {
+            const nextDay = new Date(this.value);
+            nextDay.setDate(nextDay.getDate() + 1);
+            checkoutInput.value = nextDay.toISOString().split("T")[0];
+          }
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          searchButton.disabled = true;
+          searchButton.innerHTML =
+            '<i class="fas fa-spinner fa-spin me-2"></i>Searching...';
+
+          setTimeout(() => {
+            searchButton.disabled = false;
+            searchButton.innerHTML =
+              '<i class="fas fa-search me-2"></i>Search Hotels';
+            showNotification(
+              "Hotel search completed! Contact our team for booking.",
+              "success"
+            );
+          }, 2000);
+        });
+      }
+
+      // Load featured hotels
+      function loadFeaturedHotels() {
+        const hotels = [
+          {
+            image:
+              "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+            name: "Luxury Resort & Spa",
+            location: "Maldives",
+            rating: 4.8,
+            price: 299,
+            amenities: ["pool", "spa", "beach", "restaurant"],
+          },
+          {
+            image:
+              "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+            name: "City View Hotel",
+            location: "New York",
+            rating: 4.5,
+            price: 199,
+            amenities: ["gym", "restaurant", "bar", "wifi"],
+          },
+          {
+            image:
+              "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+            name: "Mountain Lodge",
+            location: "Switzerland",
+            rating: 4.7,
+            price: 249,
+            amenities: ["parking", "restaurant", "spa", "wifi"],
+          },
+        ];
+
+        const hotelsContainer = document.getElementById("hotelsContainer");
+        hotelsContainer.innerHTML = hotels
+          .map((hotel) => createHotelCard(hotel))
+          .join("");
+      }
+
+      // Create hotel card HTML
+      function createHotelCard(hotel) {
+        const amenityIcons = {
+          pool: '<i class="fas fa-swimming-pool" title="Swimming Pool"></i>',
+          spa: '<i class="fas fa-spa" title="Spa"></i>',
+          beach: '<i class="fas fa-umbrella-beach" title="Beach Access"></i>',
+          restaurant: '<i class="fas fa-utensils" title="Restaurant"></i>',
+          gym: '<i class="fas fa-dumbbell" title="Fitness Center"></i>',
+          bar: '<i class="fas fa-glass-martini-alt" title="Bar"></i>',
+          wifi: '<i class="fas fa-wifi" title="Free WiFi"></i>',
+          parking: '<i class="fas fa-parking" title="Parking"></i>',
+        };
+
+        return `
+            <div class="col-md-4">
+                <div class="card hotel-card">
+                    <img src="${hotel.image}" class="card-img-top" alt="${
+          hotel.name
+        }" style="height: 200px; object-fit: cover;">
+                    <div class="rating">${
+                      hotel.rating
+                    } <i class="fas fa-star text-warning"></i></div>
+                    <div class="card-body">
+                        <h5 class="card-title">${hotel.name}</h5>
+                        <p class="card-text">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>${
+                              hotel.location
+                            }
+                        </p>
+                        <div class="amenities">
+                            ${hotel.amenities
+                              .map((a) => amenityIcons[a])
+                              .join("")}
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="h5 text-primary mb-0">From $${
+                              hotel.price
+                            }/night</span>
+                            <button class="btn btn-outline-primary" onclick="bookHotel('${
+                              hotel.name
+                            }')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+      }
+
+      // Load popular destinations
+      function loadPopularDestinations() {
+        const destinations = [
+          {
+            image:
+              "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9",
+            name: "Maldives",
+            hotelCount: 156,
+            description: "Tropical paradise with luxury resorts",
+          },
+          {
+            image:
+              "https://images.unsplash.com/photo-1522083165195-3424ed129620",
+            name: "Paris",
+            hotelCount: 482,
+            description: "City of lights and romance",
+          },
+          {
+            image:
+              "https://images.unsplash.com/photo-1533106497176-45ae19e68ba2",
+            name: "Dubai",
+            hotelCount: 378,
+            description: "Luxury shopping and modern architecture",
+          },
+          {
+            image:
+              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da",
+            name: "Tokyo",
+            hotelCount: 594,
+            description: "Modern city with traditional charm",
+          },
+        ];
+
+        const destinationsContainer = document.getElementById(
+          "destinationsContainer"
+        );
+        destinationsContainer.innerHTML = destinations
+          .map((destination) => createDestinationCard(destination))
+          .join("");
+      }
+
+      // Create destination card HTML
+      function createDestinationCard(destination) {
+        return `
+            <div class="col-md-3">
+                <div class="destination-card">
+                    <img src="${destination.image}" alt="${destination.name}">
+                    <div class="hotel-count">${destination.hotelCount} Hotels</div>
+                    <div class="overlay">
+                        <h4 class="mb-2">${destination.name}</h4>
+                        <p class="mb-0">${destination.description}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+      }
+
+      // Initialize navbar scroll effect
+      function initializeNavbarScroll() {
+        const navbar = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            navbar.style.padding = "10px 0";
+          } else {
+            navbar.style.padding = "15px 0";
+          }
+        });
+      }
+
+      // Initialize smooth scroll
+      function initializeSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      }
+
+      // Show notification
+      function showNotification(message, type) {
+        const notification = document.createElement("div");
+        notification.className = `notification ${type}`;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: white;
+            border-left: 4px solid ${
+              type === "success" ? "#28a745" : "#dc3545"
+            };
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        `;
+        notification.innerHTML = message;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.transform = "translateX(0)";
+          setTimeout(() => {
+            notification.style.transform = "translateX(100%)";
+            setTimeout(() => notification.remove(), 300);
+          }, 3000);
+        }, 100);
+      }
+
+      // Book hotel function
+      function bookHotel(hotelName) {
+        showNotification(
+          `Booking process initiated for ${hotelName}`,
+          "success"
+        );
+      }
+    </script>
+  </body>
+</html>

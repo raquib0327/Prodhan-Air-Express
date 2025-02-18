@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental - Travel Dreams</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="cars.css" />
+  </head>
+  <body>
+
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <!-- <img src="../images/logo.png" alt="Travel Dreams" height="40" /> -->
+            Prodhan Air Express
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item active" href="airtickets.html">
+                      <i class="fas fa-plane-departure"></i> Air Tickets</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="hotels.html">
+                      <i class="fas fa-hotel"></i> Hotels</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="cars.html">
+                      <i class="fas fa-car"></i> Car Rental</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="bikes.html">
+                      <i class="fas fa-bicycle"></i> Bike Rental</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="visa.html">
+                      <i class="fas fa-passport"></i> Visa Services</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Our Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-buttons">
+              <a href="airtickets.html" class="btn btn-primary">Book Your Trip</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="container text-center">
+          <h1 class="display-4 fw-bold text-white mb-3">
+            Rent Your Perfect Car
+          </h1>
+          <p class="lead text-white mb-4">
+            Choose from our wide selection of vehicles for your journey
+          </p>
+          <div class="hero-buttons">
+            <a href="#search-form" class="btn btn-primary btn-lg me-3">
+              <i class="fas fa-search me-2"></i>Search Cars
+            </a>
+            <a href="#featured-cars" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-tag me-2"></i>View Deals
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="search-form">
+      <div class="container">
+        <div class="search-container">
+          <form id="carSearchForm">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Pickup Location</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fas fa-map-marker-alt"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="pickup"
+                    placeholder="City or Airport"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Return Location</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fas fa-map-marker-alt"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="return"
+                    placeholder="Same as pickup"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label">Pickup Date</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="far fa-calendar"></i
+                  ></span>
+                  <input
+                    type="date"
+                    class="form-control"
+                    name="pickupDate"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label">Return Date</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="far fa-calendar"></i
+                  ></span>
+                  <input
+                    type="date"
+                    class="form-control"
+                    name="returnDate"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="advanced-options mb-3">
+                  <div class="row g-3">
+                    <div class="col-md-3">
+                      <label class="form-label">Vehicle Type</label>
+                      <select class="form-select" name="vehicleType">
+                        <option value="all">All Types</option>
+                        <option value="economy">Economy</option>
+                        <option value="compact">Compact</option>
+                        <option value="suv">SUV</option>
+                        <option value="luxury">Luxury</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Transmission</label>
+                      <select class="form-select" name="transmission">
+                        <option value="any">Any</option>
+                        <option value="automatic">Automatic</option>
+                        <option value="manual">Manual</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Price Range</label>
+                      <select class="form-select" name="priceRange">
+                        <option value="any">Any Price</option>
+                        <option value="budget">Budget</option>
+                        <option value="mid">Mid-Range</option>
+                        <option value="premium">Premium</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Features</label>
+                      <select class="form-select" name="features">
+                        <option value="any">Any Features</option>
+                        <option value="gps">GPS</option>
+                        <option value="bluetooth">Bluetooth</option>
+                        <option value="childseat">Child Seat</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  id="searchButton"
+                >
+                  <i class="fas fa-search me-2"></i>Search Cars
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Cars -->
+    <section class="featured-cars py-5" id="featured-cars">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Featured Cars</h2>
+        <div class="row g-4" id="carsContainer">
+          <!-- Cars will be loaded by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Car Categories -->
+    <section class="car-categories py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Browse by Category</h2>
+        <div class="row g-4" id="categoriesContainer">
+          <!-- Categories will be loaded by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Why Rent With Us</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="feature-card text-center">
+              <i class="fas fa-car mb-3"></i>
+              <h4>Latest Models</h4>
+              <p>
+                Our fleet includes the latest car models with regular
+                maintenance.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card text-center">
+              <i class="fas fa-shield-alt mb-3"></i>
+              <h4>Full Insurance</h4>
+              <p>Comprehensive insurance coverage for peace of mind.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card text-center">
+              <i class="fas fa-headset mb-3"></i>
+              <h4>24/7 Support</h4>
+              <p>Round-the-clock assistance for any situation.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card text-center">
+              <i class="fas fa-hand-holding-usd mb-3"></i>
+              <h4>Best Rates</h4>
+              <p>Competitive pricing with no hidden charges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>About Travel Dreams</h4>
+                <p>
+                  Your trusted partner for unforgettable travel experiences. We
+                  make your travel dreams come true.
+                </p>
+                <div class="social-links mt-3">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Our Services</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                  <li><a href="airtickets.html">Flight Booking</a></li>
+                  <li><a href="hotels.html">Hotel Booking</a></li>
+                  <li><a href="cars.html">Car Rental</a></li>
+                  <li><a href="visa.html">Visa Services</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i> 123 Travel Street,
+                    City
+                  </li>
+                  <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                  <li><i class="fas fa-envelope"></i> info@traveldreams.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-0">
+                &copy; 2025 Travel Dreams. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer (Same as previous pages)
+    <footer class="footer">
+      <!-- Footer content remains the same -->
+    </footer> -->
+
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/cars.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeSearchForm();
+        loadFeaturedCars();
+        loadCarCategories();
+        initializeNavbarScroll();
+        initializeSmoothScroll();
+      });
+
+      // Initialize search form
+      function initializeSearchForm() {
+        const form = document.getElementById("carSearchForm");
+        const searchButton = document.getElementById("searchButton");
+
+        // Set minimum date as today
+        const dateInputs = document.querySelectorAll('input[type="date"]');
+        const today = new Date().toISOString().split("T")[0];
+        dateInputs.forEach((input) => {
+          input.min = today;
+        });
+
+        // Set return date min based on pickup date
+        const pickupInput = document.querySelector('input[name="pickupDate"]');
+        const returnInput = document.querySelector('input[name="returnDate"]');
+
+        pickupInput.addEventListener("change", function () {
+          returnInput.min = this.value;
+          if (returnInput.value && returnInput.value <= this.value) {
+            const nextDay = new Date(this.value);
+            nextDay.setDate(nextDay.getDate() + 1);
+            returnInput.value = nextDay.toISOString().split("T")[0];
+          }
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          searchButton.disabled = true;
+          searchButton.innerHTML =
+            '<i class="fas fa-spinner fa-spin me-2"></i>Searching...';
+
+          setTimeout(() => {
+            searchButton.disabled = false;
+            searchButton.innerHTML =
+              '<i class="fas fa-search me-2"></i>Search Cars';
+            showNotification(
+              "Car search completed! Contact our team for booking.",
+              "success"
+            );
+          }, 2000);
+        });
+      }
+
+      // Load featured cars
+      function loadFeaturedCars() {
+        const cars = [
+          {
+            image:
+              "https://images.unsplash.com/photo-1511919884226-fd3cad34687c",
+            name: "Mercedes-Benz C-Class",
+            type: "Luxury",
+            price: 89,
+            features: {
+              seats: 5,
+              bags: 3,
+              transmission: "Automatic",
+              ac: true,
+              gps: true,
+            },
+          },
+          {
+            image: "https://images.unsplash.com/photo-1550355291-bbee04a92027",
+            name: "Toyota Camry",
+            type: "Economy",
+            price: 49,
+            features: {
+              seats: 5,
+              bags: 2,
+              transmission: "Automatic",
+              ac: true,
+              gps: true,
+            },
+          },
+          {
+            image:
+              "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+            name: "Range Rover Sport",
+            type: "SUV",
+            price: 129,
+            features: {
+              seats: 7,
+              bags: 4,
+              transmission: "Automatic",
+              ac: true,
+              gps: true,
+            },
+          },
+        ];
+
+        const carsContainer = document.getElementById("carsContainer");
+        carsContainer.innerHTML = cars
+          .map((car) => createCarCard(car))
+          .join("");
+      }
+
+      // Create car card HTML
+      function createCarCard(car) {
+        return `
+            <div class="col-md-4">
+                <div class="card car-card">
+                    <img src="${car.image}" class="card-img-top" alt="${
+          car.name
+        }" style="height: 200px; object-fit: cover;">
+                    <div class="car-type">${car.type}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">${car.name}</h5>
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-user"></i> ${
+                                  car.features.seats
+                                } Seats
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-suitcase"></i> ${
+                                  car.features.bags
+                                } Bags
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-cog"></i> ${
+                                  car.features.transmission
+                                }
+                            </div>
+                            ${
+                              car.features.ac
+                                ? `
+                            <div class="feature">
+                                <i class="fas fa-snowflake"></i> A/C
+                            </div>
+                            `
+                                : ""
+                            }
+                            ${
+                              car.features.gps
+                                ? `
+                            <div class="feature">
+                                <i class="fas fa-map-marker-alt"></i> GPS
+                            </div>
+                            `
+                                : ""
+                            }
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="h5 text-primary mb-0">$${
+                              car.price
+                            }/day</span>
+                            <button class="btn btn-outline-primary" onclick="bookCar('${
+                              car.name
+                            }')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+      }
+
+      // Load car categories
+      function loadCarCategories() {
+        const categories = [
+          {
+            image: "https://images.unsplash.com/photo-1550355291-bbee04a92027",
+            name: "Economy",
+            carCount: 24,
+            description: "Fuel-efficient and budget-friendly",
+          },
+          {
+            image:
+              "https://images.unsplash.com/photo-1511919884226-fd3cad34687c",
+            name: "Luxury",
+            carCount: 18,
+            description: "Premium comfort and style",
+          },
+          {
+            image:
+              "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+            name: "SUV",
+            carCount: 15,
+            description: "Spacious and versatile",
+          },
+          {
+            image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341",
+            name: "Sports",
+            carCount: 12,
+            description: "High performance and thrill",
+          },
+        ];
+
+        const categoriesContainer = document.getElementById(
+          "categoriesContainer"
+        );
+        categoriesContainer.innerHTML = categories
+          .map((category) => createCategoryCard(category))
+          .join("");
+      }
+
+      // Create category card HTML
+      function createCategoryCard(category) {
+        return `
+            <div class="col-md-3">
+                <div class="category-card" onclick="filterByCategory('${category.name}')">
+                    <img src="${category.image}" alt="${category.name}">
+                    <div class="car-count">${category.carCount} Cars</div>
+                    <div class="overlay">
+                        <h4 class="mb-2">${category.name}</h4>
+                        <p class="mb-0">${category.description}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+      }
+
+      // Initialize navbar scroll effect
+      function initializeNavbarScroll() {
+        const navbar = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            navbar.style.padding = "10px 0";
+          } else {
+            navbar.style.padding = "15px 0";
+          }
+        });
+      }
+
+      // Initialize smooth scroll
+      function initializeSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      }
+
+      // Show notification
+      function showNotification(message, type) {
+        const notification = document.createElement("div");
+        notification.className = `notification ${type}`;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: white;
+            border-left: 4px solid ${
+              type === "success" ? "#28a745" : "#dc3545"
+            };
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        `;
+        notification.innerHTML = message;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.transform = "translateX(0)";
+          setTimeout(() => {
+            notification.style.transform = "translateX(100%)";
+            setTimeout(() => notification.remove(), 300);
+          }, 3000);
+        }, 100);
+      }
+
+      // Book car function
+      function bookCar(carName) {
+        showNotification(`Booking process initiated for ${carName}`, "success");
+      }
+
+      // Filter by category function
+      function filterByCategory(category) {
+        showNotification(`Showing ${category} cars`, "success");
+      }
+    </script>
+  </body>
+</html>

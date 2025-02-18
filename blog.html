@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Blog - Prodhan Air Express</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- <img src="../images/logo.png" alt="Travel Dreams" height="40" /> -->
+          Prodhan Air Express
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item active" href="airtickets.html">
+                    <i class="fas fa-plane-departure"></i> Air Tickets</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="hotels.html">
+                    <i class="fas fa-hotel"></i> Hotels</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="cars.html">
+                    <i class="fas fa-car"></i> Car Rental</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bikes.html">
+                    <i class="fas fa-bicycle"></i> Bike Rental</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="visa.html">
+                    <i class="fas fa-passport"></i> Visa Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="airtickets.html" class="btn btn-primary">Book Your Trip</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Blog Content -->
+    <section class="blog-content py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Search Bar -->
+            <div class="search-bar mb-4">
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search blog posts..."
+              />
+              <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Featured Post -->
+            <div class="featured-post mb-5">
+              <div class="post-card featured">
+                <img
+                  src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd"
+                  alt="Featured Post"
+                />
+                <div class="post-content">
+                  <div class="post-category">Featured</div>
+                  <h2>10 Must-Visit Destinations in 2025</h2>
+                  <div class="post-meta">
+                    <span><i class="far fa-user"></i> John Anderson</span>
+                    <span
+                      ><i class="far fa-calendar"></i> February 15, 2025</span
+                    >
+                    <span><i class="far fa-comments"></i> 12 Comments</span>
+                  </div>
+                  <p>
+                    Discover the most exciting and trending travel destinations
+                    that should be on your bucket list this year...
+                  </p>
+                  <a href="blog-post.html" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Regular Posts -->
+            <div class="row" id="blogPosts">
+              <!-- Post 1 -->
+              <div class="col-md-6 mb-4">
+                <div class="post-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4"
+                    alt="Blog Post"
+                  />
+                  <div class="post-content">
+                    <div class="post-category">Travel Tips</div>
+                    <h3>Essential Travel Photography Tips</h3>
+                    <div class="post-meta">
+                      <span
+                        ><i class="far fa-calendar"></i> February 14, 2025</span
+                      >
+                      <span><i class="far fa-comments"></i> 8 Comments</span>
+                    </div>
+                    <p>
+                      Learn how to capture stunning travel photos with these
+                      professional tips...
+                    </p>
+                    <a href="blog-post.html" class="btn btn-outline-primary"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post 2 -->
+              <div class="col-md-6 mb-4">
+                <div class="post-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa"
+                    alt="Blog Post"
+                  />
+                  <div class="post-content">
+                    <div class="post-category">Hotels</div>
+                    <h3>Luxury Hotels on a Budget</h3>
+                    <div class="post-meta">
+                      <span
+                        ><i class="far fa-calendar"></i> February 13, 2025</span
+                      >
+                      <span><i class="far fa-comments"></i> 5 Comments</span>
+                    </div>
+                    <p>
+                      Discover how to book luxury accommodations without
+                      breaking the bank...
+                    </p>
+                    <a href="blog-post.html" class="btn btn-outline-primary"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-4">
+              <button id="loadMoreBtn" class="btn btn-primary">
+                Load More Posts
+              </button>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-lg-4">
+            <!-- Categories -->
+            <div class="sidebar-widget">
+              <h3>Categories</h3>
+              <ul class="category-list">
+                <li>
+                  <a href="#" data-category="all"
+                    >All Posts <span>(25)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-category="travel-tips"
+                    >Travel Tips <span>(8)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-category="destinations"
+                    >Destinations <span>(12)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-category="hotels">Hotels <span>(5)</span></a>
+                </li>
+                <li>
+                  <a href="#" data-category="food"
+                    >Food & Culture <span>(7)</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-category="adventure"
+                    >Adventure <span>(6)</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="sidebar-widget">
+              <h3>Recent Posts</h3>
+              <div class="recent-posts">
+                <div class="recent-post-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
+                    alt="Recent Post"
+                  />
+                  <div class="recent-post-content">
+                    <h4>Hidden Gems in Europe</h4>
+                    <span class="date">February 12, 2025</span>
+                  </div>
+                </div>
+                <div class="recent-post-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                    alt="Recent Post"
+                  />
+                  <div class="recent-post-content">
+                    <h4>Best Street Food in Asia</h4>
+                    <span class="date">February 11, 2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popular Tags -->
+            <div class="sidebar-widget">
+              <h3>Popular Tags</h3>
+              <div class="tag-cloud">
+                <a href="#" class="tag">Travel</a>
+                <a href="#" class="tag">Adventure</a>
+                <a href="#" class="tag">Photography</a>
+                <a href="#" class="tag">Food</a>
+                <a href="#" class="tag">Hotels</a>
+                <a href="#" class="tag">Tips</a>
+                <a href="#" class="tag">Culture</a>
+                <a href="#" class="tag">Destinations</a>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="sidebar-widget">
+              <h3>Newsletter</h3>
+              <div class="newsletter-form">
+                <p>Subscribe to get travel tips and updates</p>
+                <form id="newsletterForm">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your email address"
+                  />
+                  <button type="submit" class="btn btn-primary w-100 mt-2">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Prodhan Air Express</h4>
+                <p>
+                  Your trusted partner for unforgettable travel experiences. We
+                  make your travel dreams come true.
+                </p>
+                <div class="social-links mt-3">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Our Services</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                  <li><a href="airtickets.html">Flight Booking</a></li>
+                  <li><a href="hotels.html">Hotel Booking</a></li>
+                  <li><a href="cars.html">Car Rental</a></li>
+                  <li><a href="visa.html">Visa Services</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i> 123 Travel Street,
+                    City
+                  </li>
+                  <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                  <li>
+                    <i class="fas fa-envelope"></i> info@prodhanairexpress.com
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-0">
+                &copy; 2025 Prodhan Air Express. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/blog.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize all components
+        initializeSearch();
+        initializeLoadMore();
+        initializeCategories();
+        initializeNewsletter();
+        initializeAnimations();
+      });
+
+      // Search functionality
+      function initializeSearch() {
+        const searchInput = document.getElementById("searchInput");
+        const blogPosts = document.querySelectorAll(".post-card");
+
+        searchInput.addEventListener("input", function (e) {
+          const searchTerm = e.target.value.toLowerCase();
+
+          blogPosts.forEach((post) => {
+            const title =
+              post.querySelector("h3")?.textContent.toLowerCase() ||
+              post.querySelector("h2")?.textContent.toLowerCase();
+            const content = post.querySelector("p").textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || content.includes(searchTerm)) {
+              post.style.display = "block";
+            } else {
+              post.style.display = "none";
+            }
+          });
+        });
+      }
+
+      // Load more posts
+      function initializeLoadMore() {
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
+        let currentPosts = 2; // Number of posts initially visible
+
+        loadMoreBtn.addEventListener("click", function () {
+          // Simulated post data
+          const newPosts = [
+            {
+              image:
+                "https://images.unsplash.com/photo-1533105079780-92b9be482077",
+              category: "Adventure",
+              title: "Mountain Climbing Guide",
+              date: "February 10, 2025",
+              comments: 6,
+              excerpt: "Everything you need to know about mountain climbing...",
+            },
+            {
+              image:
+                "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1",
+              category: "Food",
+              title: "Cultural Cuisines",
+              date: "February 9, 2025",
+              comments: 4,
+              excerpt: "Explore the diverse flavors of world cuisine...",
+            },
+          ];
+
+          const blogPostsContainer = document.getElementById("blogPosts");
+
+          newPosts.forEach((post) => {
+            const postHTML = `
+                    <div class="col-md-6 mb-4">
+                        <div class="post-card" style="opacity: 0">
+                            <img src="${post.image}" alt="${post.title}">
+                            <div class="post-content">
+                                <div class="post-category">${post.category}</div>
+                                <h3>${post.title}</h3>
+                                <div class="post-meta">
+                                    <span><i class="far fa-calendar"></i> ${post.date}</span>
+                                    <span><i class="far fa-comments"></i> ${post.comments} Comments</span>
+                                </div>
+                                <p>${post.excerpt}</p>
+                                <a href="blog-post.html" class="btn btn-outline-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            blogPostsContainer.insertAdjacentHTML("beforeend", postHTML);
+
+            // Animate new posts
+            const newPost = blogPostsContainer.lastElementChild;
+            setTimeout(() => {
+              newPost.querySelector(".post-card").style.opacity = "1";
+              newPost.querySelector(".post-card").style.transform =
+                "translateY(0)";
+            }, 100);
+          });
+
+          currentPosts += newPosts.length;
+          if (currentPosts >= 6) {
+            // Maximum posts
+            loadMoreBtn.style.display = "none";
+          }
+        });
+      }
+
+      // Category filtering
+      function initializeCategories() {
+        const categoryLinks = document.querySelectorAll(".category-list a");
+        const posts = document.querySelectorAll(".post-card");
+
+        categoryLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const category = this.dataset.category;
+
+            categoryLinks.forEach((link) => link.classList.remove("active"));
+            this.classList.add("active");
+
+            posts.forEach((post) => {
+              const postCategory = post
+                .querySelector(".post-category")
+                .textContent.toLowerCase();
+              if (category === "all" || postCategory.includes(category)) {
+                post.closest(".col-md-6").style.display = "block";
+              } else {
+                post.closest(".col-md-6").style.display = "none";
+              }
+            });
+          });
+        });
+      }
+
+      // Newsletter subscription
+      function initializeNewsletter() {
+        const newsletterForm = document.getElementById("newsletterForm");
+
+        newsletterForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = this.querySelector('input[type="email"]').value;
+
+          if (validateEmail(email)) {
+            alert("Thank you for subscribing to our newsletter!");
+            this.reset();
+          } else {
+            alert("Please enter a valid email address.");
+          }
+        });
+      }
+
+      // Email validation
+      function validateEmail(email) {
+        const re =
+          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      // Animations
+      function initializeAnimations() {
+        const posts = document.querySelectorAll(".post-card");
+
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        posts.forEach((post) => {
+          post.style.opacity = "0";
+          post.style.transform = "translateY(20px)";
+          post.style.transition = "all 0.6s ease-out";
+          observer.observe(post);
+        });
+      }
+    </script>
+  </body>
+</html>

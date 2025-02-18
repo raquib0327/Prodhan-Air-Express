@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bike Rental - Travel Dreams</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="bikes.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- <img src="../images/logo.png" alt="Travel Dreams" height="40" /> -->
+          Prodhan Air Express
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item active" href="airtickets.html">
+                    <i class="fas fa-plane-departure"></i> Air Tickets</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="hotels.html">
+                    <i class="fas fa-hotel"></i> Hotels</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="cars.html">
+                    <i class="fas fa-car"></i> Car Rental</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bikes.html">
+                    <i class="fas fa-bicycle"></i> Bike Rental</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="visa.html">
+                    <i class="fas fa-passport"></i> Visa Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="airtickets.html" class="btn btn-primary">Book Your Trip</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1>Explore the World on Two Wheels</h1>
+            <p class="lead">
+              Discover amazing cycling routes and rent quality bikes for your
+              adventure
+            </p>
+            <a href="#search-form" class="btn btn-primary btn-lg"
+              >Find Your Bike</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Form -->
+    <section id="search-form" class="py-5 bg-light">
+      <div class="container">
+        <div class="search-box p-4">
+          <form id="bikeSearchForm">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <label class="form-label">Location</label>
+                <select class="form-select" required>
+                  <option value="">Select Location</option>
+                  <option>Europe</option>
+                  <option>Asia</option>
+                  <option>USA</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Bike Type</label>
+                <select class="form-select" required>
+                  <option value="">Select Type</option>
+                  <option>Mountain Bike</option>
+                  <option>Road Bike</option>
+                  <option>Electric Bike</option>
+                  <option>Hybrid Bike</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Pick-up Date</label>
+                <input type="date" class="form-control" required />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Duration</label>
+                <select class="form-select" required>
+                  <option value="">Select Duration</option>
+                  <option>1 Day</option>
+                  <option>2-3 Days</option>
+                  <option>1 Week</option>
+                  <option>2 Weeks</option>
+                </select>
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Search Bikes
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Bikes Section -->
+    <section class="featured-bikes py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Featured Bikes</h2>
+        <div class="row" id="featuredBikes">
+          <!-- Bikes will be loaded dynamically via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by Category -->
+    <section class="bike-categories py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Browse by Category</h2>
+        <div class="row" id="bikeCategories">
+          <!-- Categories will be loaded dynamically via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Cycling Routes -->
+    <section class="cycling-routes py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Popular Cycling Routes</h2>
+        <div class="row" id="cyclingRoutes">
+          <!-- Routes will be loaded dynamically via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Why Choose Our Bike Rental Service</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="feature-card text-center">
+              <i class="fas fa-bicycle fa-3x mb-3 text-primary"></i>
+              <h4>Quality Bikes</h4>
+              <p>Premium bikes maintained to the highest standards</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="feature-card text-center">
+              <i class="fas fa-map-marked-alt fa-3x mb-3 text-primary"></i>
+              <h4>Expert Route Planning</h4>
+              <p>Customized routes based on your experience level</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="feature-card text-center">
+              <i class="fas fa-headset fa-3x mb-3 text-primary"></i>
+              <h4>24/7 Support</h4>
+              <p>Round-the-clock assistance for your peace of mind</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Prodhan Air Express</h4>
+                <p>
+                  Your trusted partner for unforgettable travel experiences. We
+                  make your travel dreams come true.
+                </p>
+                <div class="social-links mt-3">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Our Services</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                  <li><a href="airtickets.html">Flight Booking</a></li>
+                  <li><a href="hotels.html">Hotel Booking</a></li>
+                  <li><a href="cars.html">Car Rental</a></li>
+                  <li><a href="visa.html">Visa Services</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i> 123 Travel Street,
+                    City
+                  </li>
+                  <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                  <li>
+                    <i class="fas fa-envelope"></i> info@prodhanairexpress.com
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-0">
+                &copy; 2025 Prodhan Air Express. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/bikes.js"></script>
+    <script>
+      // Bike Data
+      const featuredBikes = [
+        {
+          image:
+            "https://images.unsplash.com/photo-1544233726-9f1d2b27be9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "Mountain Bike Pro",
+          description: "Perfect for trail riding and mountain adventures",
+          features: [
+            "Full Suspension",
+            '27.5" Wheels',
+            "Hydraulic Disc Brakes",
+          ],
+          price: "$45/day",
+        },
+        {
+          image:
+            "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "Road Bike Elite",
+          description: "High-performance road cycling experience",
+          features: ["Carbon Frame", "Aerodynamic Design", "22-Speed"],
+          price: "$55/day",
+        },
+        {
+          image:
+            "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "E-Bike Comfort",
+          description: "Electric-assisted city cruising",
+          features: ["500Wh Battery", "80km Range", "Smart Display"],
+          price: "$65/day",
+        },
+      ];
+
+      const categories = [
+        {
+          image:
+            "https://images.unsplash.com/photo-1473976345543-9ffc928e648d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "Mountain Bikes",
+          description: "Trail & All-Mountain",
+        },
+        {
+          image:
+            "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "Road Bikes",
+          description: "Race & Endurance",
+        },
+        {
+          image:
+            "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "Electric Bikes",
+          description: "City & Mountain E-Bikes",
+        },
+        {
+          image:
+            "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "Hybrid Bikes",
+          description: "City & Trekking",
+        },
+      ];
+
+      const routes = [
+        {
+          image:
+            "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "European Adventures",
+          location: "Multiple Countries",
+          duration: "3-14 days",
+          features: [
+            "Amsterdam to Paris",
+            "Rhine River Valley",
+            "Alps Challenge",
+            "Various difficulty levels",
+          ],
+        },
+        {
+          image:
+            "https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "Asian Expeditions",
+          location: "Multiple Countries",
+          duration: "5-20 days",
+          features: [
+            "Japanese Mountain Trails",
+            "Vietnam Coastal Route",
+            "Thailand Temple Tour",
+            "Moderate to challenging",
+          ],
+        },
+        {
+          image:
+            "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+          title: "American Trails",
+          location: "United States",
+          duration: "1-30 days",
+          features: [
+            "Pacific Coast Highway",
+            "Rocky Mountain Trail",
+            "East Coast Greenway",
+            "All difficulty levels",
+          ],
+        },
+      ];
+
+      // DOM Content Loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load Featured Bikes
+        loadFeaturedBikes();
+
+        // Load Categories
+        loadCategories();
+
+        // Load Routes
+        loadRoutes();
+
+        // Form validation
+        const searchForm = document.getElementById("bikeSearchForm");
+        if (searchForm) {
+          searchForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            // Add your search logic here
+            alert("Search functionality will be implemented soon!");
+          });
+        }
+      });
+
+      // Load Featured Bikes
+      function loadFeaturedBikes() {
+        const container = document.getElementById("featuredBikes");
+        if (!container) return;
+
+        container.innerHTML = featuredBikes
+          .map(
+            (bike) => `
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="${bike.image}" class="card-img-top" alt="${
+              bike.title
+            }">
+                        <div class="card-body">
+                            <h5 class="card-title">${bike.title}</h5>
+                            <p class="card-text">${bike.description}</p>
+                            <ul class="list-unstyled">
+                                ${bike.features
+                                  .map(
+                                    (feature) => `
+                                    <li><i class="fas fa-check text-success"></i> ${feature}</li>
+                                `
+                                  )
+                                  .join("")}
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="price">${bike.price}</span>
+                                <a href="#" class="btn btn-primary">Rent Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `
+          )
+          .join("");
+      }
+
+      // Load Categories
+      function loadCategories() {
+        const container = document.getElementById("bikeCategories");
+        if (!container) return;
+
+        container.innerHTML = categories
+          .map(
+            (category) => `
+                <div class="col-md-3 mb-4">
+                    <div class="category-card">
+                        <img src="${category.image}" alt="${category.title}">
+                        <h4>${category.title}</h4>
+                        <p>${category.description}</p>
+                        <a href="#" class="btn btn-outline-primary">View All</a>
+                    </div>
+                </div>
+            `
+          )
+          .join("");
+      }
+
+      // Load Routes
+      function loadRoutes() {
+        const container = document.getElementById("cyclingRoutes");
+        if (!container) return;
+
+        container.innerHTML = routes
+          .map(
+            (route) => `
+                <div class="col-md-4 mb-4">
+                    <div class="route-card">
+                        <img src="${route.image}" alt="${route.title}">
+                        <div class="route-info">
+                            <h4>${route.title}</h4>
+                            <div class="route-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> ${
+                                  route.location
+                                }</span>
+                                <span><i class="fas fa-clock"></i> ${
+                                  route.duration
+                                }</span>
+                            </div>
+                            <ul class="route-features">
+                                ${route.features
+                                  .map(
+                                    (feature) => `
+                                    <li><i class="fas fa-check"></i> ${feature}</li>
+                                `
+                                  )
+                                  .join("")}
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary w-100">Explore Routes</a>
+                        </div>
+                    </div>
+                </div>
+            `
+          )
+          .join("");
+      }
+    </script>
+  </body>
+</html>
